@@ -1,42 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+/* body {
+  background: #1b1b1b;
+} */
+
+.dark {
+  background: #1b1b1b;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.light {
+  background: #fff;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.btn-container {
+  height: 10vh;
+  display: flex;
+  justify-content: end;
+  /* background: #1b1b1b; */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  padding: 0px 20px;
+  margin: 15px 0px;
+  border: none;
+  cursor: pointer;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btndark {
+  background-color: #292929;
+  color: #e2e2e2;
 }
 
-.card {
-  padding: 2em;
+.btnlight {
+  background-color: #e2e2e2;
+  color: #000;
+}
+.cal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.read-the-docs {
-  color: #888;
+.calculator {
+  position: relative;
+  display: grid;
+}
+.calculator .value {
+  grid-column: span 4;
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-align: right;
+  font-size: 18px;
+  height: 70px;
+  background-color: #e2e2e2;
+  color: #000;
+}
+
+.calculator span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #292929;
+  color: #fff;
+}
+
+.calculator span.clear {
+  grid-column: span 2;
+  width: 120px;
+  background: rgb(255, 163, 26);
+}
+
+.calculator span:active {
+  background: rgb(255, 163, 26);
+}
+
+.calculator span.plus {
+  grid-row: span 2;
+  height: 120px;
+}
+
+.calculator span.equal {
+  background: rgb(255, 163, 26);
 }
